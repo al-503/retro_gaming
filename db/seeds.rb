@@ -11,7 +11,7 @@ Offer.destroy_all
 Booking.destroy_all
 
 user1 = User.create(first_name: "Axel", last_name: "Ridray", email: "axel.ridray@sfr.fr", password:"123456")
-user2 = User.create(first_name: "Dam's", last_name: "menages", email: "menages.damien@gmail.com", password:"654321")
+user2 = User.create(first_name: "Dam's", last_name: "menages", email: "menages.damien@gmail.com", password:" ")
 
 offer1 = Offer.create(name:"super nitendo 64", description:"super console old school baby", price_per_day: 10.30, user: user2)
 
