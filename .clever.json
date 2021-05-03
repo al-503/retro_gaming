@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_6777a89c-5d50-47a4-86c2-31abf2b27210",
+      "org_id": "user_88ca48d4-dc38-4b2a-b945-052f356775fd",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_6777a89c-5d50-47a4-86c2-31abf2b27210.git",
+      "name": "retro_gaming",
+      "alias": "retro_gaming"
+    }
+  ]
+}
