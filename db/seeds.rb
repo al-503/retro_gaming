@@ -15,4 +15,4 @@ user2 = User.create(first_name: "Dam's", last_name: "menages", email: "menages.d
 
 offer1 = Offer.create(name:"super nitendo 64", description:"super console old school baby", price_per_day: 10.30, user: user2)
 
-booking1 = Booking.create( user: user1,  offer: offer1, start_date: datetime.now, end_date: datetime.now + 2.days, total_price: 20.60, status: "accepted")
+booking1 = Booking.create( user: user1,  offer: offer1, start_date: DateTime.now, end_date: DateTime.now + 2.days, total_price: 20.60, status: "accepted")
