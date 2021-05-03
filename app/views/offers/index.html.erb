@@ -1,0 +1,9 @@
+<h1>Hello from index.html.erb</h1>
+
+<ul>
+  <% @offers.each do |offer| %>
+  <li><%= offer.name %></li>
+  <li><%= offer.description %></li>
+  <li><%= offer.price_per_day %>$</li>
+  <% end %>
+</ul>
