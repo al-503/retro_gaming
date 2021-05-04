@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.home_body {
+  background-color: rgb(80, 76, 76);
+  padding: 2px;
+}
 .banner{
   display: flex;
   justify-content: center;
@@ -8,7 +12,7 @@
   margin: 40px  40px auto;
   border-radius: 16px;
   height: 617px;
-  box-shadow:2px 2px 2px rgb(153, 148, 148);
+  box-shadow:2px 2px 2px rgb(0, 0, 0);
 }
 .text{
   margin-top: 8px auto;
