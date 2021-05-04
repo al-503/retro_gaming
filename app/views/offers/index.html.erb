@@ -2,6 +2,7 @@
 
 <ul>
   <% @offers.each do |offer| %>
+  <li><%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %></li>
   <li><%= offer.name %></li>
   <li><%= offer.description %></li>
   <li><%= offer.price_per_day %>$</li>
