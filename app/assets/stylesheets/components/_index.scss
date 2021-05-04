@@ -2,3 +2,42 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+// defini des hauteur & largeur pour le débutprobablement problématique design final 
+h1{
+  text-align: center;
+  margin: 20px auto;
+  margin-bottom: 40px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.picture {
+  margin: 8px auto;
+  border-radius: 8px;
+  background-color: aqua;
+  height: 230px;
+  width: 400px;
+}
+.card {
+  height: 400px;
+  width: 450px;
+}
+.offer_link:hover{
+    text-decoration: none;
+  }
+
+.texte {
+  text-align: justify;
+  padding-left: 16px;
+  color: rgb(56, 53, 53);
+  text-decoration: none ;
+}
+.far{
+  position: absolute;
+  left: 400px;
+  bottom:130px;
+}
