@@ -4,7 +4,7 @@
 @import "navbar";
 @import "card_show";
 
-// defini des hauteur & largeur pour le débutprobablement problématique design final 
+// defini des hauteur & largeur pour le débutprobablement problématique design final
 h1{
   text-align: center;
   margin: 20px auto;
@@ -15,6 +15,7 @@ h1{
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .picture {
   margin: 8px auto;
@@ -26,6 +27,7 @@ h1{
 .card {
   height: 400px;
   width: 450px;
+  margin-top: 8px;
   box-shadow: 2px 2px 2px rgb(192, 192, 192);
   border-radius: 16px;
 }
