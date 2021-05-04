@@ -4,6 +4,7 @@
       <%= link_to offer_path(offer), class: "offer_link" do %>
         <div class="card">
           <div class="picture">
+            <%= cl_image_tag offer.photo.key, crop: :fill %>
           </div>
           <div class="texte">
             <h2><%= offer.name %></h2> 
