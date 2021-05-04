@@ -13,4 +13,10 @@
 .text{
   margin-top: 8px auto;
   color:white;
+  text-align: center;
+}
+.footer {
+  display: block;
+  display: flex;
+  justify-content: space-around;
 }

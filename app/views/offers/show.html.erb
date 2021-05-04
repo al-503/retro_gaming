@@ -1,0 +1,21 @@
+<h1><%= @offer.name.capitalize %></h1>
+<!--mettre la photo en plus grand ----->
+<div class="offer_show">
+  <!---description du pruduit---->
+  <div class="bloc">
+
+  <div class="img"><!--Doit etre remplacer par une image !---></div>
+
+    <div class="texte">
+      <!--mis en ligne par ----->
+      <p>mis en ligne par : <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
+      <p><strong><%= @offer.description %></strong></p>
+      <!---la console coute x$ par jour de location ---->
+      <p><%= @offer.price_per_day %> $</p>
+    </div>
+        <div class="mini_card_nav">
+          <%= link_to "Go Back", offers_path(@offer), class:"btn btn-primary rounded-3" %>
+          <%= link_to "Book",  new_offer_booking_path(@offer), class:"btn btn-success rounded-3" %>
+        </div>
+  </div>
+</div>
