@@ -15,7 +15,7 @@
   align-items: center;
   margin: 10px auto;
   color: rgb(255, 255, 255);
-  background-image: url("banner_index.jpg");
+  background-image: asset-url("banner_index.jpg");
   background-size: cover;
   height:500px;
   width:1500px;
@@ -54,9 +54,10 @@ h1{
   box-shadow: 2px 2px 2px rgb(0, 0, 0);
   border-radius: 16px; 
 }
-.card:hover{
+.contour:hover{
   border: 5px solid #19BB73;
 }
+
 .offer_link:hover{
   text-decoration: none;
 }

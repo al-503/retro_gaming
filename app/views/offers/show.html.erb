@@ -1,8 +1,11 @@
 <div class="show_body">
   <!--mettre la photo en plus grand ----->
-  <%= cl_image_tag @offer.photo.key, class:"img" %>
-  <!---description du produit---->
-
+    <% if @offer.photo.attached? %>
+      <%= cl_image_tag @offer.photo.key, class:"img" %>
+    <% else %>
+      <%= image_tag "no_photo.jpg", class:"img" %>
+    <% end %>
+    <!---description du pruduit---->
   <h1 class="color"><%= @offer.name.capitalize %></h1>
     <div class="bloc_description">
         <div class="texte">

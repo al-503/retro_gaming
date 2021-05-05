@@ -14,3 +14,8 @@
 
 //font
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+main {
+  min-height: calc(100vh - 75px);
+  background: rgb(80, 76, 76);
+}
