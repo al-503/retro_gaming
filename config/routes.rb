@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [ :new, :create ]
   end
 
-  resources :booking, only: [ :show ] do
+  resources :bookings, only: [] do
      # refacto
     member { patch :accept }
       # 2 eme version non refacto

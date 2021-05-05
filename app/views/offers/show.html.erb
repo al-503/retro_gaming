@@ -22,3 +22,12 @@
         </div>
     </div>
 </div>
+
+<ul class="list-group">
+  <% @offer.bookings.each do |booking| %>
+    <li class="list-group-item"><%= booking.start_date %></li>
+    <li class="list-group-item"><%= booking.end_date %></li>
+  <% end %>
+</ul>
+
+
