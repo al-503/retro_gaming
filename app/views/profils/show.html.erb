@@ -1,2 +1,25 @@
-<h1>Profils#show</h1>
+<h1>Welcome <%= current_user.first_name %></h1>
+
+
+<div class="card deck">
+  <h2>Mes Consoles</h2>
+  <% current_user.offers.each do |offer| %>
+    <%= offer.user.first_name %>
+      <%= offer.name %>
+      <%= offer.description %>
+      <%= offer.price_per_day %>
+    <% end %>
+</div>
+
+  <div class="card deck">
+    <h2>Mes locations</h2>
+  </div>
+              <%# current user.booking %>
+
+  <div class="card deck">
+    <h2>Les locations de mes consoles</h2>
+  </div>
+</div>
+
+
 
