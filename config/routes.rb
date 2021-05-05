@@ -19,6 +19,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :profil, only: [ :show ]
+resource :profil, only: [ :show ]
 
 end
