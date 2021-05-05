@@ -5,8 +5,14 @@
     <div class="content cards">
       <% @offers.each do |offer| %>
         <%= link_to offer_path(offer), class: "offer_link" do %>
-          <div class="card">    
+          <div class="card">
+
+            <% if offer.photo.attached? %>
               <%= cl_image_tag offer.photo.key, class:"picture" %>
+              <% else %>
+              <%= image_tag "no_photo.jpg", class:"picture" %>
+            <% end %>
+
             <div class="texte">
               <h2><%= offer.name %></h2> 
               <i class="far fa-heart"></i>
