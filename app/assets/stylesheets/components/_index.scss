@@ -5,9 +5,30 @@
 @import "card_show";
 
 // defini des hauteur & largeur pour le débutprobablement problématique design final
-h1{
+.index_body {
+  background-color: rgb(80, 76, 76);
+  padding: 2px;
+}
+.index_banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  color: rgb(255, 255, 255);
+  background-image: url("banner_index.jpg");
+  background-size: cover;
+  height:500px;
+  width:1500px;
+  border-radius: 16px;
   text-align: center;
-  margin: 20px auto;
+  justify-content: center;
+  box-shadow:2px 2px 2px rgb(0, 0, 0);
+}
+h1{
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 4px 4px 1px rgb(250, 0, 0), 8px 8px 1px rgb(0, 250, 0), 12px 12px 1px rgb(0, 0, 250);
+  text-align: center;
+  margin: 0 auto;
   margin-bottom: 40px;
 }
 .content{
@@ -19,23 +40,29 @@ h1{
 }
 .picture {
   margin: 8px auto;
+  border: 1px solid rgb(224, 224, 224);
   border-radius: 8px;
-  background-color: aqua;
   height: 230px;
   width: 430px;
+  object-position: center;
+  object-fit: cover;
 }
 .card {
   height: 400px;
   width: 450px;
-  margin-top: 8px;
-  box-shadow: 2px 2px 2px rgb(192, 192, 192);
-  border-radius: 16px;
+  margin-top: 32px;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  border-radius: 16px; 
+}
+.card:hover{
+  border: 5px solid #19BB73;
 }
 .offer_link:hover{
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 
 .texte {
+  padding: 8px;
   text-align: justify;
   padding-left: 16px;
   color: rgb(56, 53, 53);
