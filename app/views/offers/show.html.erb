@@ -1,8 +1,8 @@
 <div class="show_body">
   <!--mettre la photo en plus grand ----->
   <%= cl_image_tag @offer.photo.key, class:"img" %>
-  <!---description du pruduit---->
-  
+  <!---description du produit---->
+
   <h1 class="color"><%= @offer.name.capitalize %></h1>
     <div class="bloc_description">
         <div class="texte">
@@ -19,3 +19,12 @@
         </div>
     </div>
 </div>
+
+<ul class="list-group">
+  <% @offer.bookings.each do |booking| %>
+    <li class="list-group-item"><%= booking.start_date %></li>
+    <li class="list-group-item"><%= booking.end_date %></li>
+  <% end %>
+</ul>
+
+
