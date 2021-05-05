@@ -110,9 +110,12 @@ offers = [offer1, offer2, offer3, offer3, offer4, offer5, offer6, offer7, offer8
   booking = Booking.new(
     user: users.sample,
     offer: offer,
+    start_date: start_date,
+    end_date: end_date,
     total_price: (end_date - start_date + 1).to_i * price_per_day,
     status: "accepted gros bg"
   )
+  booking.save!
 end
 
 
