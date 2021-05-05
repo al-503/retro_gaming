@@ -1,2 +1,34 @@
-<h1>Profils#show</h1>
-<p>Find me in app/views/profils/show.html.erb</p>
+<h1 class="color p-3">Welcome <%= current_user.first_name %></h1>
+
+
+<div class="container">
+    <div class="card p-3 col-4 offset-4">
+      <h2 class="p-3">My Rentals</h2>
+        <% current_user.offers.each do |offer| %>
+          <%= offer.name %>
+          <%= offer.description %>
+          <%= offer.price_per_day %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="card p-3 col-4 offset-4">
+      <h2 class="p-3">My game consoles</h2>
+              <%# current user.booking %>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="card p-3 col-4 offset-4">
+      <h2 class="p-3">Rentals and game consoles</h2>
+
+  </div>
+</div>
+
+
+
+
