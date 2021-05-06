@@ -8,9 +8,9 @@ class OffersController < ApplicationController
         offers.name ILIKE :query \
         OR offers.description ILIKE :query \
       "
-      @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
+      @offers = Offer.where(sql_query, query: "%#{params[:query]}%").order(created_at: :desc)
     else
-      @offers = Offer.all
+      @offers = Offer.all.order(created_at: :desc)
     end
     
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
