@@ -9,6 +9,7 @@ class User < ApplicationRecord
 
   has_many :booked_offers, through: :offers, source: :bookings
 
+  has_one_attached :avatar
 
   def fullname
     @user = "#{first_name} #{last_name}"

@@ -21,6 +21,8 @@ users = []
     password: "123456"
   )
   users << user
+  file = File.open("app/assets/images/ret.jpg")
+  user.avatar.attach(io: file, filename:"ret.jpg", content_type:'images/png')
   user.save!
 end
 
@@ -113,7 +115,7 @@ offers = [offer1, offer2, offer3, offer3, offer4, offer5, offer6, offer7, offer8
     start_date: start_date,
     end_date: end_date,
     total_price: (end_date - start_date + 1).to_i * price_per_day,
-    status: "accepted gros bg"
+    status: "accepted"
   )
   booking.save!
 end
