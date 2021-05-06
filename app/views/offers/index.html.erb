@@ -16,6 +16,7 @@
     </div>
 
   </div>
+  <!---pas toucher content cards---->
     <div class="content cards">
       <% @offers.each do |offer| %>
         <%= link_to offer_path(offer), class: "offer_link" do %>
@@ -29,9 +30,9 @@
 
             <div class="texte">
               <h2><%= offer.name %></h2>
-              <i class="far fa-heart"></i>
+              <!--<i class="far fa-heart"></i>--->
               <p><%= truncate(offer.description) %></p>
-              <p><%= offer.price_per_day %> $</p>
+              <p><strong><%= offer.price_per_day %> $</strong></p>
             </div>
           </div>
         <% end %>
@@ -46,5 +47,4 @@
       </div>
 
     </div>
-      <%= link_to "Go Home", root_path, class:"btn btn-primary rounded"%>
 </div>
