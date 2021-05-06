@@ -10,7 +10,7 @@ class OffersController < ApplicationController
       "
       @offers = Offer.where(sql_query, query: "%#{params[:query]}%")
     else
-      @offer = Offer.all
+      @offers = Offer.all
     end
     
     # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
