@@ -4,6 +4,14 @@ class OffersController < ApplicationController
 
   def index
     @offers = Offer.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude
+      }
+    end
   end
 
   def new
@@ -28,6 +36,6 @@ class OffersController < ApplicationController
   private
   
   def offer_params
-    params.require(:offer).permit(:name, :description, :price_per_day, :photo)
+    params.require(:offer).permit(:name, :description, :price_per_day, :photo, :address)
   end
 end
