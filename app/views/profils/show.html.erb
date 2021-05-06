@@ -2,33 +2,26 @@
 
 
 <div class="container">
-    <div class="card p-3 col-4 offset-4">
+  <div class="card p-3 col-4 offset-4">
       <h2 class="p-3">My Rentals</h2>
-        <% current_user.offers.each do |offer| %>
-          <%= offer.name %>
-          <%= offer.description %>
-          <%= offer.price_per_day %>
+        <p><% current_user.offers.each do |offer| %></p>
+          <p>Console : <%= offer.name %></p>
+          <p>description : <%= offer.description %></p>
+          <P>Price/day : <%= offer.price_per_day %> $ </P>
         <% end %>
-      </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="card p-3 col-4 offset-4">
+      <h2 class="p-3">My bookings</h2>
+      <p><% current_user.bookings.each do |offer| %></p>
+          <p>Console : <%=  %></p>
+          <p>Start date : <%= offer.start_date %></p>
+          <p>End date : <%= offer.end_date %></p>
+          <p>total price : <%= offer.total_price %> $ </p>
+          <p>Status : <%= offer.status %></p>
+        <% end %>
     </div>
 </div>
-
-
-<div class="container">
-    <div class="card p-3 col-4 offset-4">
-      <h2 class="p-3">My game consoles</h2>
-              <%# current user.booking %>
-  </div>
-</div>
-
-
-<div class="container">
-    <div class="card p-3 col-4 offset-4">
-      <h2 class="p-3">Rentals and game consoles</h2>
-
-  </div>
-</div>
-
-
-
-

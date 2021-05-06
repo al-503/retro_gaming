@@ -23,13 +23,25 @@
          <%= link_to "Book",  new_offer_booking_path(@offer), class:"btn btn-success rounded-3" %>
         </div>
     </div>
+
+<div class="card">
+  <ul class="list-group">
+    <% @offer.bookings.each do |booking| %>
+      <p class="list-group-item"><%= booking.start_date %> - <%= booking.end_date %></p>
+    <% end %>
+  </ul>
 </div>
 
-<ul class="list-group">
-  <% @offer.bookings.each do |booking| %>
-    <li class="list-group-item"><%= booking.start_date %></li>
-    <li class="list-group-item"><%= booking.end_date %></li>
-  <% end %>
-</ul>
-
-
+<div class="container">
+  <h1 class="color p-3">Bookings</h1>
+  <div class="row">
+    <div class="card p-3 col-4 offset-4">
+      <%= simple_form_for [ @offer, @booking ] do |f| %>
+      <%= f.input :start_date, html5: true%>
+      <%= f.input :end_date, html5: true%>
+      <%= f.submit "Booking gros bg", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
