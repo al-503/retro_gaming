@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `restaurant_id` to associate review with corresponding restaurant
+    # we need `offer_id` to associate review with corresponding offer
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     @booking.user = current_user
@@ -26,7 +26,9 @@ class BookingsController < ApplicationController
   end
 
   def accept
-
+    @booking = Booking.find(params[:id])
+    @booking.accept(booking_params)
+    redirect_to booking_path(@booking)
   end
 
   def decline

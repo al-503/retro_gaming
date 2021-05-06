@@ -4,12 +4,17 @@
 <div class="container">
     <div class="card p-3 col-4 offset-4">
       <h2 class="p-3">My Rentals</h2>
+      <ul>
         <% current_user.offers.each do |offer| %>
-          <%= offer.name %>
-          <%= offer.description %>
-          <%= offer.price_per_day %>
+          <li><%= offer.name %></li>
+          <li><%= offer.description %></li>
+          <li><%= offer.price_per_day %></li>
         <% end %>
-      </div>
+      </ul>
+
+      <%#=link_to "Accept",
+            accept_booking_path(@booking),
+            method: :patch %>
     </div>
 </div>
 
