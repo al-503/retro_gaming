@@ -1,26 +1,15 @@
 // Specific CSS for your home-page
 .home_body {
-  background-color: rgb(80, 76, 76);
-  padding: 2px;
-}
-.banner{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: asset-url("home.jpg");
   background-size: cover;
-  margin: 40px  40px auto;
-  border-radius: 16px;
-  height: 617px;
-  box-shadow:2px 2px 2px rgb(0, 0, 0);
+  height: calc(100vh - 92px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
+
 .text{
-  margin-top: 8px auto;
   color:white;
   text-align: center;
-}
-.footer {
-  display: block;
-  display: flex;
-  justify-content: space-around;
 }

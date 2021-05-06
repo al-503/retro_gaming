@@ -32,6 +32,14 @@ h1{
   margin: 0 auto;
   margin-bottom: 40px;
 }
+
+h3{
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 4px 4px 1px rgb(250, 0, 0), 8px 8px 1px rgb(0, 250, 0), 12px 12px 1px rgb(0, 0, 250);
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
 .content{
   display: flex;
   align-items: center;
@@ -53,7 +61,7 @@ h1{
   width: 450px;
   margin-top: 32px;
   box-shadow: 2px 2px 2px rgb(0, 0, 0);
-  border-radius: 16px; 
+  border-radius: 16px;
 }
 .contour:hover{
   border: 5px solid #19BB73;
