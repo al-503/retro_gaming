@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="card p-3 col-4 offset-4">
-      <h2 class="p-3">My Rentals</h2>
+      <h2 class="p-3">Mes Consoles</h2>
         <p><% current_user.offers.each do |offer| %></p>
           <p>Console : <%= offer.name %></p>
           <p>description : <%= offer.description %></p>
@@ -15,13 +15,37 @@
 
 <div class="container">
     <div class="card p-3 col-4 offset-4">
-      <h2 class="p-3">My bookings</h2>
-      <p><% current_user.bookings.each do |offer| %></p>
+      <h2 class="p-3">Consoles que j'ai réservées</h2>
+      <p><% current_user.bookings.each do |booking| %></p>
           <p>Console : <%=  %></p>
-          <p>Start date : <%= offer.start_date %></p>
-          <p>End date : <%= offer.end_date %></p>
-          <p>total price : <%= offer.total_price %> $ </p>
-          <p>Status : <%= offer.status %></p>
+          <p>Start date : <%= booking.start_date %></p>
+          <p>End date : <%= booking.end_date %></p>
+          <p>total price : <%= booking.total_price %> $ </p>
+          <p>Status : <%= booking.status %></p>
         <% end %>
     </div>
 </div>
+
+<div class="container">
+    <div class="card p-3 col-4 offset-4">
+      <h2 class="p-3">Consoles qu'on m'a réservées</h2>
+      <p><% current_user.booked_offers.each do |booking| %></p>
+          <p>Console : <%=  %></p>
+          <p>Start date : <%= booking.start_date %></p>
+          <p>End date : <%= booking.end_date %></p>
+          <p>total price : <%= booking.total_price %> $ </p>
+          <p>Status : <%= booking.status %></p>
+          <% if booking.status == "Pending" %>
+              <p><%=link_to "Accept",
+                          accept_booking_path(booking),
+                          method: :patch %></p>
+              <p><%=link_to "Decline",
+                          decline_booking_path(booking),
+                          method: :patch %></p>
+          <% end %>
+        <% end %>
+    </div>
+</div>
+
+
+
