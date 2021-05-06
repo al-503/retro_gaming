@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="card p-3 col-4 offset-4">
-      <h2 class="p-3">My consoles rents</h2>
+      <h2 class="p-3">My bookings</h2>
       <p><% current_user.bookings.each do |offer| %></p>
           <p>Console : <%=  %></p>
           <p>Start date : <%= offer.start_date %></p>
