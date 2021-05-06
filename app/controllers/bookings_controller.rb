@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.total_price = (@booking.end_date - @booking.start_date + 1).to_i * @offer.price_per_day
     @booking.status = "Pending"
-    if @booking.save!
+    if @booking.save
       redirect_to offer_path(@offer)
     else
       render :new
@@ -27,11 +27,16 @@ class BookingsController < ApplicationController
 
   def accept
     @booking = Booking.find(params[:id])
-    @booking.accept(booking_params)
-    redirect_to booking_path(@booking)
+    @booking.status = "Accepted"
+    @booking.save
+    redirect_to profil_path
   end
 
   def decline
+    @booking = Booking.find(params[:id])
+    @booking.status = "Declined"
+    @booking.save
+    redirect_to profil_path
   end
 
   private

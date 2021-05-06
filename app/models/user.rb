@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :offers
   has_many :bookings
 
+  has_many :booked_offers, through: :offers, source: :bookings
+
 
   def fullname
     @user = "#{first_name} #{last_name}"
