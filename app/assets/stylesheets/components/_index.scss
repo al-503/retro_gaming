@@ -21,7 +21,6 @@
   background-size: cover;
   height:500px;
   width:1500px;
-  border-radius: 16px;
   box-shadow:2px 2px 2px rgb(0, 0, 0);
   text-align: center;
 }
@@ -35,7 +34,7 @@
 
 h1, h3{
   font-family: 'Press Start 2P', cursive;
-  text-shadow: 4px 4px 1px rgb(250, 0, 0), 8px 8px 1px rgb(0, 250, 0), 12px 12px 1px rgb(0, 0, 250);
+  text-shadow: 4px 4px 1px rgb(250, 0, 0), 9px 9px 1px rgb(0, 250, 0), 12px 12px 1px rgb(0, 0, 250);
   text-align: center;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -59,20 +58,18 @@ h1, h3{
   object-fit: cover;
 }
 .card {
-  height: 400px;
-  width: 450px;
   margin-top: 32px;
   box-shadow: 2px 2px 2px rgb(0, 0, 0);
-  border-radius: 16px;
 }
 .contour:hover{
-  border: 5px solid #19BB73;
+  border: 2px solid rgb(0, 250, 0); //#19BB73
+  box-shadow: 2px 2px 1px rgb(0, 250, 0), 8px 8px 1px rgb(250, 0, 0), 12px 12px 1px rgb(0, 0, 250);
 }
 
 .offer_link:hover{
   text-decoration: none;
 }
-
+// texte pour les card de l index 
 .texte {
   padding: 8px;
   text-align: justify;

@@ -8,44 +8,44 @@
     <% end %>
     <!---description du pruduit---->
 
-  <h1 class="color"><%= @offer.name.capitalize %></h1>
-    <div class="bloc_description">
-        <div class="texte">
-          <!--mis en ligne par ----->
-          <p>mis en ligne par : <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
-          <p><strong><%= @offer.description %></strong></p>
-          <!---la console coute x$ par jour de location ---->
-          <p><%= @offer.price_per_day %> $</p>
-        </div>
+  <h1 class="color pt-5"><%= @offer.name.capitalize %></h1>
 
-        <div class="mini_card_nav">
-         <%= link_to "Go Back", offers_path, class:"btn btn-primary rounded-3" %>
+    <div class="container">
+      <div class="row">
+        <div class="card p-3 col-4 offset-4">
+          <!--mis en ligne par ----->
+          <p>Mis en ligne par <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
+          <p><%= @offer.description %></p>
+          <!---la console coute x$ par jour de location ---->
+          <p><strong><%= @offer.price_per_day %> $</strong></p>
         </div>
-    </div>
+      </div>
 
 <% unless current_user == @offer.user %>
-
-<div class="card">
-  <ul class="list-group">
-    <% @offer.bookings.each do |booking| %>
-      <p class="list-group-item"><%= booking.start_date %> - <%= booking.end_date %></p>
-    <% end %>
-  </ul>
-</div>
-
-  <div class="container">
-    <h1 class="color p-3">Bookings</h1>
+  
     <div class="row">
       <div class="card p-3 col-4 offset-4">
+        <h3>Actual Rent</h3>
+          <% @offer.bookings.each do |booking| %>
+            <p class="list-group-item text-center"><strong>Begin :</strong> <%= booking.start_date %><br/><strong>End :</strong> <%= booking.end_date %></p>
+          <% end %>
+       
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card p-3 col-4 offset-4">
+        <h3 class=" color pt-1">Bookings</h3>
 
         <%= simple_form_for [ @offer, @booking ] do |f| %>
         <%= f.input :start_date, html5: true%>
         <%= f.input :end_date, html5: true%>
-        <%= f.submit "Booking gros bg", class: "btn btn-success" %>
+        <%= f.submit "Booking gros", class: "btn btn-success offset-4 mb-4" %>
         <% end %>
 
       </div>
     </div>
   </div>
 <% end %>
+         <%= link_to "Go Back", offers_path, class:"btn btn-primary rounded-3" %>
 </div>
