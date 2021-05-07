@@ -4,6 +4,7 @@
 @import "navbar";
 @import "card_show";
 @import "map";
+@import "boutonflex";
 
 // defini des hauteur & largeur pour le débutprobablement problématique design final
 .index_body {
@@ -27,10 +28,10 @@
 .search {
   width: 400px;
 }
-.search-form {
-  display: flex;
-  align-items: center;
+.form-control {
+  box-shadow: 2px 1px 2px black;
 }
+
 
 h1, h3{
   font-family: 'Press Start 2P', cursive;
