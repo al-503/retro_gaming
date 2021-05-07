@@ -17,6 +17,7 @@
 
 //geocoder
 @import 'mapbox-gl/dist/mapbox-gl';
+@import "flatpickr/dist/flatpickr";
 
 main {
   min-height: calc(100vh - 75px);

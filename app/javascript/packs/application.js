@@ -16,27 +16,18 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import "bootstrap";
 
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
-import 'mapbox-gl/dist/mapbox-gl.css';
-// internal imports
+
 import { initMapbox } from '../plugins/init_mapbox';
+import { initFlatpickr } from "../plugins/init_flatpickr";
+
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initFlatpickr();
 })
-
-
-// External imports
-import "bootstrap";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-});
