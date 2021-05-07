@@ -22,7 +22,7 @@
     <div class="content cards">
       <% @offers.each do |offer| %>
         <%= link_to offer_path(offer), class: "offer_link" do %>
-          <div class="card contour">
+          <div class="card contour mr-3">
 
             <% if offer.photo.attached? %>
               <%= cl_image_tag offer.photo.key, class:"picture" %>
