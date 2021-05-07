@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     @booking.user = current_user
-    @booking.total_price = (@booking.end_date - @booking.start_date + 1).to_i * @offer.price_per_day/86400
+    @booking.total_price = ((@booking.end_date - @booking.start_date + 1).to_i * @offer.price_per_day/86_400).round(2)
     @booking.status = "Pending"
     if @booking.save
       redirect_to offer_path(@offer)
