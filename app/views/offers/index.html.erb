@@ -9,9 +9,10 @@
         <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a console"
+          placeholder: "Search a console"
           %>
-        <%= submit_tag "Search", class: "btn btn-primary" %><% end %>
+        <%= render "components/boutonflex", action: "Find!" %>
+        <% end %>
       </div>
     </div>
 
