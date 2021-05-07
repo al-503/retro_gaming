@@ -1,4 +1,4 @@
-<h1 class="color pt-5">Welcome <%= current_user.first_name %></h1>
+<h1 class="color pt-5"><%= current_user.first_name %></h1>
 
 <%= link_to 'Go Back Offers', offers_path, class:"btn btn-primary" %>
 
@@ -18,7 +18,7 @@
     <div class="card p-3 col-4 offset-4">
       <h2 class="p-3">Consoles que j'ai réservées</h2>
       <p><% current_user.bookings.each do |booking| %></p>
-          <p>Console : <%=  %></p>
+          <p>Console : <%= booking.offer.name %></p>
           <p>Start date : <%= booking.start_date %></p>
           <p>End date : <%= booking.end_date %></p>
           <p>total price : <%= booking.total_price %> $ </p>
@@ -31,7 +31,7 @@
     <div class="card p-3 col-4 offset-4">
       <h2 class="p-3">Consoles qu'on m'a réservées</h2>
       <p><% current_user.booked_offers.each do |booking| %></p>
-          <p>Console : <%=  %></p>
+          <p>Console : <%= booking.offer.name %></p>
           <p>Start date : <%= booking.start_date %></p>
           <p>End date : <%= booking.end_date %></p>
           <p>total price : <%= booking.total_price %> $ </p>
@@ -39,9 +39,11 @@
           <% if booking.status == "Pending" %>
               <p><%=link_to "Accept",
                           accept_booking_path(booking),
+                          class:"btn btn-success",
                           method: :patch %></p>
               <p><%=link_to "Decline",
                           decline_booking_path(booking),
+                          class:"btn btn-danger",
                           method: :patch %></p>
           <% end %>
         <% end %>
