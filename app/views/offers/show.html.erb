@@ -13,6 +13,7 @@
     <div class="container">
       <div class="row">
         <div class="card p-3 col-4 offset-4">
+          <h3 class=" color pt-1">Infos</h3>
           <!--mis en ligne par ----->
           <p>Mis en ligne par <%= @offer.user.first_name %> <%= @offer.user.last_name %></p>
           <p><%= @offer.description %></p>
@@ -22,14 +23,14 @@
       </div>
 
 <% unless current_user == @offer.user %>
-  
+
     <div class="row">
       <div class="card p-3 col-4 offset-4">
-        <h3>Actual Rent</h3>
+        <h3 class=" color pt-1">Actual Rent</h3>
           <% @offer.bookings.each do |booking| %>
             <p class="list-group-item text-center"><strong>Begin :</strong> <%= booking.start_date %><br/><strong>End :</strong> <%= booking.end_date %></p>
           <% end %>
-       
+
       </div>
     </div>
 
@@ -38,8 +39,8 @@
         <h3 class=" color pt-1">Bookings</h3>
 
         <%= simple_form_for [ @offer, @booking ] do |f| %>
-        <%= f.input :start_date, html5: true%>
-        <%= f.input :end_date, html5: true%>
+        <%= f.input :start_date, html5: true, input_html: {class: "datepicker"}%>
+        <%= f.input :end_date, html5: true, input_html: {class: "datepicker"}%>
         <%= f.submit "Booking gros", class: "btn btn-success offset-4 mb-4" %>
         <% end %>
 

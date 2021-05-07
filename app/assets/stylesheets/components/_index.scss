@@ -5,6 +5,8 @@
 @import "card_show";
 @import "map";
 @import "profil";
+@import "boutonflex";
+
 
 // defini des hauteur & largeur pour le débutprobablement problématique design final
 .index_body {
@@ -28,10 +30,10 @@
 .search {
   width: 400px;
 }
-.search-form {
-  display: flex;
-  align-items: center;
+.form-control {
+  box-shadow: 2px 1px 2px black;
 }
+
 
 h1, h3{
   font-family: 'Press Start 2P', cursive;
@@ -46,6 +48,7 @@ h1, h3{
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
+  max-width: 900px;
   flex-wrap: wrap;
 }
 
@@ -70,7 +73,7 @@ h1, h3{
 .offer_link:hover{
   text-decoration: none;
 }
-// texte pour les card de l index 
+// texte pour les card de l index
 .texte {
   padding: 8px;
   text-align: justify;
