@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap');
+.box {
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  font-weight: 800;
+  box-shadow:1px 1px 3px grey;
+}
+.footer_Cp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
