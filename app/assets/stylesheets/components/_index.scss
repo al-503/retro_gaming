@@ -45,6 +45,7 @@ h1, h3{
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
+  max-width: 900px;
   flex-wrap: wrap;
 }
 
@@ -69,7 +70,7 @@ h1, h3{
 .offer_link:hover{
   text-decoration: none;
 }
-// texte pour les card de l index 
+// texte pour les card de l index
 .texte {
   padding: 8px;
   text-align: justify;
